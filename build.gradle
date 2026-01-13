@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+}
+
+ext {
+    hytaleHome = "${System.getProperty("user.home")}/AppData/Roaming/Hytale"
+}
+
+group = 'ru.mjkey'
+version = '1.0.0'
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(21)
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(files("$hytaleHome/install/release/package/game/latest/Server/HytaleServer.jar"))
+}
+
+// Update manifest.json version
+tasks.register('updatePluginManifest') {
+    def manifestFile = file('src/main/resources/manifest.json')
+    doLast {
+        if (!manifestFile.exists()) {
+            throw new GradleException("Could not find manifest.json at ${manifestFile.path}!")
+        }
+        def manifestJson = new groovy.json.JsonSlurper().parseText(manifestFile.text)
+        manifestJson.Version = version
+        manifestFile.text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(manifestJson))
+    }
+}
+
+tasks.named('processResources') {
+    dependsOn 'updatePluginManifest'
+}
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    
+    manifest {
+        attributes(
+            'Manifest-Version': '1.0'
+        )
+    }
+}

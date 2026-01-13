@@ -1,0 +1,23 @@
+{
+    "Group": "MerryJoyKey Studio",
+    "Name": "LinkedTrapdoors",
+    "Version": "1.0.0",
+    "Description": "Syncs adjacent trapdoors - open one, all connected open too! Crouch to use a single trapdoor.",
+    "Authors": [
+        {
+            "Name": "MjKey",
+            "Url": "https://github.com/MjKey"
+        }
+    ],
+    "Website": "https://github.com/MerryJoyKey-Studio",
+    "ServerVersion": "*",
+    "Dependencies": {
+        
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "Main": "ru.mjkey.linkedtrapdoors.ModMain",
+    "IncludesAssetPack": true
+}
