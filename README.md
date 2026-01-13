@@ -9,6 +9,10 @@ Crouch to interact with a single trapdoor without affecting neighbors.
 1. Build the mod: `gradlew build`
 2. Copy `build/libs/LinkedTrapdoors-1.0.0.jar` to your Hytale mods folder
 
+OR
+
+Download from Release or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/linkedtrapdoor)
+
 Mods folder location:
 ```
 %APPDATA%\Hytale\install\release\UserData\Mods
@@ -34,4 +38,5 @@ MIT
 ## Author
 
 [MjKey](https://github.com/MjKey)
+
 
