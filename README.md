@@ -33,4 +33,5 @@ MIT
 
 ## Author
 
-MjKey — [MerryJoyKey Studio](https://github.com/MjKey)
+[MjKey](https://github.com/MjKey)
+
