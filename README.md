@@ -11,7 +11,7 @@ Crouch to interact with a single trapdoor without affecting neighbors.
 
 OR
 
-Download from Release or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/linkedtrapdoor)
+Download from Release or [CurseForge](https://www.curseforge.com/hytale/mods/linkedtrapdoor)
 
 Mods folder location:
 ```
@@ -38,5 +38,6 @@ MIT
 ## Author
 
 [MjKey](https://github.com/MjKey)
+
 
 
